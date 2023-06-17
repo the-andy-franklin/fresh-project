@@ -1,18 +1,18 @@
 {
-	"lock": false,
-	"tasks": {
-		"start": "deno run -A --watch=static/,routes/ dev.ts"
-	},
-	"importMap": "./import_map.json",
-	"compilerOptions": {
-		"jsx": "react-jsx",
-		"jsxImportSource": "preact"
-	},
-	"lint": {
-		"rules": {
-			"exclude": [
-				"no-unused-vars"
-			]
-		}
-	}
+  "lock": false,
+  "tasks": {
+    "start": "deno run -A --watch=static/,routes/ --node-modules-dir dev.ts"
+  },
+  "importMap": "./import_map.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact"
+  },
+  "lint": {
+    "rules": {
+      "exclude": [
+        "no-unused-vars"
+      ]
+    }
+  }
 }
