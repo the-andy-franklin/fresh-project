@@ -15,7 +15,7 @@ const InstallPWAButton = () => {
   useEffect(() => {
     addEventListener("beforeinstallprompt", (e: BeforeInstallPromptEvent) => {
       e.preventDefault();
-      setDeferredPrompt(e as BeforeInstallPromptEvent);
+      setDeferredPrompt(e);
     });
 
     return () => {
