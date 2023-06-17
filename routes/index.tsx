@@ -9,9 +9,8 @@ declare global {
 }
 
 export default function Home() {
-  const isPWA = matchMedia("(display-mode: standalone)").matches ||
-    navigator.standalone ||
-    document.referrer.includes("android-app://");
+  const isPWA = window.navigator.standalone ||
+    navigator.userAgent.includes("Mobile/");
 
   return (
     <div className={tw`w-screen h-screen flex flex-col`}>
