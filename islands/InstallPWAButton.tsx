@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "preact/hooks";
 import { tw } from "twind";
 
-interface BeforeInstallPromptEvent extends Event {
-  prompt?: () => void;
-  userChoice?: Promise<{ outcome: "accepted" | "dismissed"; platform: string }>;
-}
+type BeforeInstallPromptEvent = Event & {
+  prompt: () => void;
+  userChoice: Promise<{ outcome: "accepted" | "dismissed"; platform: string }>;
+};
 
 const InstallPWAButton = () => {
   const [deferredPrompt, setDeferredPrompt] = useState<
@@ -13,9 +13,9 @@ const InstallPWAButton = () => {
   const btnRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
-    addEventListener("beforeinstallprompt", (e: BeforeInstallPromptEvent) => {
+    addEventListener("beforeinstallprompt", (e: Event) => {
       e.preventDefault();
-      setDeferredPrompt(e);
+      setDeferredPrompt(e as BeforeInstallPromptEvent);
     });
 
     return () => {
@@ -26,9 +26,9 @@ const InstallPWAButton = () => {
   const onClick = () => {
     if (!deferredPrompt) return;
 
-    deferredPrompt.prompt?.();
+    deferredPrompt.prompt();
 
-    deferredPrompt.userChoice?.then(() => {
+    deferredPrompt.userChoice.then(() => {
       setDeferredPrompt(null);
     });
   };
