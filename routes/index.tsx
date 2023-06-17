@@ -2,7 +2,17 @@ import { Head } from "$fresh/runtime.ts";
 import { tw } from "twind";
 import InstallPWAButton from "../islands/InstallPWAButton.tsx";
 
+declare global {
+  interface Navigator {
+    standalone?: boolean;
+  }
+}
+
 export default function Home() {
+  const isPWA = matchMedia("(display-mode: standalone)").matches ||
+    navigator.standalone ||
+    document.referrer.includes("android-app://");
+
   return (
     <div className={tw`w-screen h-screen flex flex-col`}>
       <Head>
@@ -22,10 +32,13 @@ export default function Home() {
       <div
         className={tw`w-full flex flex-col flex-grow bg-gray-800 text-green-300 flex items-center justify-center`}
       >
-        <p className={tw`text-4xl font-bold p-4 text-rainbow`}>
-          Hello World!
-        </p>
-        <InstallPWAButton />
+        {isPWA
+          ? (
+            <p className={tw`text-4xl font-bold p-4 text-rainbow`}>
+              Hello World!
+            </p>
+          )
+          : <InstallPWAButton />}
       </div>
     </div>
   );
