@@ -27,7 +27,6 @@ const InstallPWAButton = () => {
     if (!deferredPrompt) return;
 
     deferredPrompt.prompt();
-
     deferredPrompt.userChoice.then(() => {
       setDeferredPrompt(null);
     });
