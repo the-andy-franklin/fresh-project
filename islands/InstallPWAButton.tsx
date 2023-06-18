@@ -7,6 +7,13 @@ type BeforeInstallPromptEvent = Event & {
 };
 
 const InstallPWAButton = () => {
+  const [isInstalled, setIsInstalled] = useState(true);
+  if (window.matchMedia) {
+    setIsInstalled(window.matchMedia("(display-mode: standalone)").matches);
+  }
+
+  if (isInstalled) return null;
+
   const [deferredPrompt, setDeferredPrompt] = useState<
     BeforeInstallPromptEvent | null
   >(null);
