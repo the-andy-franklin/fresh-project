@@ -1,4 +1,4 @@
-# fresh project
+# Mezo
 
 ### Usage
 
