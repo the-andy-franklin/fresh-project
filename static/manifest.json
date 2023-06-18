@@ -1,8 +1,8 @@
 {
   "name": "Mezo",
   "short_name": "Mezo",
-  "theme_color": "#000000",
-  "background_color": "#000000",
+  "theme_color": "#10b981",
+  "background_color": "#1F2937",
   "display": "fullscreen",
   "scope": "/",
   "start_url": "/",
@@ -11,13 +11,8 @@
     {
       "src": "/pwa_logo.png",
       "sizes": "512x512",
-      "type": "image/png"
-    },
-    {
-      "src": "/pwa_logo.mask.png",
-      "sizes": "512x512",
       "type": "image/png",
-      "purpose": "maskable"
+      "purpose": "any maskable"
     }
   ]
 }

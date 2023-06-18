@@ -1,13 +1,28 @@
 import { tw } from "twind";
+import type { JSX } from "preact";
+
+type NavProps = JSX.IntrinsicElements["nav"];
+const Nav = (props: NavProps) => (
+  <nav
+    className={tw`bg-gradient-linear from-purple-500 via-green-500 to-blue-500 text-white px-6 py-4`}
+    {...props}
+  />
+);
+
+type SpanProps = JSX.IntrinsicElements["span"];
+const Span = (props: SpanProps) => (
+  <span
+    className={tw`text-5xl font-semibold text-white text-outline`}
+    {...props}
+  />
+);
 
 export default function Navbar() {
   return (
-    <nav
-      className={tw`bg-gradient-linear from-pink-500 via-green-500 to-blue-500 text-white px-6 py-4`}
-    >
-      <span className={tw`text-5xl font-semibold text-white`}>
+    <Nav>
+      <Span>
         Mezo
-      </span>
-    </nav>
+      </Span>
+    </Nav>
   );
 }
