@@ -12,11 +12,11 @@ const Div = (props: DivProps) => (
   />
 );
 
-export default function Layout(child: Page, props: PageProps) {
-  return (
-    <Div>
-      <Navbar />
-      {child(props)}
-    </Div>
-  );
-}
+const Layout = (child: Page, props?: PageProps) => (
+  <Div>
+    <Navbar />
+    {child(props)}
+  </Div>
+);
+
+export default Layout;

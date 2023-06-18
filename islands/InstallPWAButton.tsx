@@ -9,10 +9,11 @@ type BeforeInstallPromptEvent = Event & {
 const InstallPWAButton = () => {
   const [isInstalled, setIsInstalled] = useState(true);
 
-  if (window.matchMedia) {
+  if (typeof window.matchMedia === "function") {
     const isPwa = window.matchMedia("(display-mode: standalone)").matches ||
       ("standalone" in navigator && navigator.standalone === true) ||
       ("appType" in navigator && navigator.appType === "pwa");
+
     setIsInstalled(isPwa);
   }
 
