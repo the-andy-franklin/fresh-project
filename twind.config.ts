@@ -1,6 +1,6 @@
 import type { Options } from "$fresh/plugins/twind.ts";
 
-export default {
+const options: Options = {
   selfURL: import.meta.url,
   theme: {
     extend: {
@@ -11,4 +11,6 @@ export default {
       },
     },
   },
-} as Options;
+};
+
+export default options;

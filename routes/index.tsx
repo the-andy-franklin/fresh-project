@@ -1,6 +1,7 @@
 import { tw } from "twind";
 import type { JSX } from "preact";
 import InstallPWAButton from "../islands/InstallPWAButton.tsx";
+import { Handlers } from "$fresh/server.ts";
 
 type DivProps = JSX.IntrinsicElements["div"];
 const Div = (props: DivProps) => (

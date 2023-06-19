@@ -7,17 +7,17 @@ type BeforeInstallPromptEvent = Event & {
 };
 
 const InstallPWAButton = () => {
-  const [isInstalled, setIsInstalled] = useState(true);
+  const [isPWA, setIsPWA] = useState(true);
 
   if (typeof window.matchMedia === "function") {
-    const isPwa = window.matchMedia("(display-mode: standalone)").matches ||
+    const isPWA = window.matchMedia("(display-mode: standalone)").matches ||
       ("standalone" in navigator && navigator.standalone === true) ||
       ("appType" in navigator && navigator.appType === "pwa");
 
-    setIsInstalled(isPwa);
+    setIsPWA(isPWA);
   }
 
-  if (isInstalled) return null;
+  if (isPWA) return null;
 
   const [deferredPrompt, setDeferredPrompt] = useState<
     BeforeInstallPromptEvent | null
@@ -48,7 +48,6 @@ const InstallPWAButton = () => {
     <button
       ref={btnRef}
       onClick={onClick}
-      id="install-button"
       className={tw`border rounded px-4 py-2 text-rainbow`}
     >
       Install

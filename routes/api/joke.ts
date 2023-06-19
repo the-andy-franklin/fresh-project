@@ -16,6 +16,6 @@ const JOKES = [
 
 export const handler = (req: Request, ctx: HandlerContext): Response => {
   const randomIndex = Math.floor(Math.random() * JOKES.length);
-  const body = JOKES[randomIndex];
+  const body = JOKES[randomIndex] + "\n" + JSON.stringify(ctx.state, null, 2);
   return new Response(body);
 };
