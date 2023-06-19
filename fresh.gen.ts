@@ -10,7 +10,7 @@ import * as $3 from "./routes/_middleware.ts";
 import * as $4 from "./routes/api/_middleware.ts";
 import * as $5 from "./routes/api/joke.ts";
 import * as $6 from "./routes/index.tsx";
-import * as $7 from "./routes/myHandler.tsx";
+import * as $7 from "./routes/myHandler.ts";
 import * as $$0 from "./islands/InstallPWAButton.tsx";
 
 const manifest = {
@@ -22,7 +22,7 @@ const manifest = {
     "./routes/api/_middleware.ts": $4,
     "./routes/api/joke.ts": $5,
     "./routes/index.tsx": $6,
-    "./routes/myHandler.tsx": $7,
+    "./routes/myHandler.ts": $7,
   },
   islands: {
     "./islands/InstallPWAButton.tsx": $$0,

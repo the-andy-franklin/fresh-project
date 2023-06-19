@@ -13,7 +13,8 @@ export default function App({ Component }: AppProps) {
         <title>Fresh App</title>
         <link rel="stylesheet" href="/index.css" />
         <link rel="manifest" href="/manifest.json" />
-        <script src="/register-sw.js" />
+        <script defer src="/register-sw.js" />
+        <script defer src="/reloader.js" />
       </Head>
       <Component />
     </>
