@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "preact/hooks";
-import { tw } from "twind";
 
 type BeforeInstallPromptEvent = Event & {
   prompt: () => void;
@@ -48,7 +47,7 @@ const InstallPWAButton = () => {
     <button
       ref={btnRef}
       onClick={onClick}
-      className={tw`border rounded px-4 py-2 text-rainbow`}
+      className="border rounded px-4 py-2 text-rainbow"
     >
       Install
     </button>
