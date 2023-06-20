@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json.schemastore.org/web-manifest",
   "name": "Mezo",
   "short_name": "Mezo",
   "theme_color": "#10b981",
@@ -8,6 +9,7 @@
   "scope": "/",
   "start_url": "/",
   "orientation": "any",
+  "offline": "/offline.html",
   "icons": [
     {
       "src": "/pwa_logo.png",
