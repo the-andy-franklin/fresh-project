@@ -1,4 +1,4 @@
-import { MiddlewareHandlerContext } from "https://deno.land/x/fresh@1.1.6/server.ts";
+import { MiddlewareHandlerContext } from "$fresh/server.ts";
 
 interface State {
   data: string;
