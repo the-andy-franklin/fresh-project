@@ -4,8 +4,7 @@ importScripts(
 
 const CACHE = "pwabuilder-page";
 
-const offlineFallbackPage = "/offline.html";
-const offlineFallbackCss = "/offline.css";
+const offlineFallbackPage = "offline.html";
 
 self.addEventListener("message", (event) => {
   if (event.data && event.data.type === "SKIP_WAITING") {
@@ -16,7 +15,7 @@ self.addEventListener("message", (event) => {
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE)
-      .then((cache) => cache.addAll([offlineFallbackPage, offlineFallbackCss])),
+      .then((cache) => cache.add(offlineFallbackPage)),
   );
 });
 
