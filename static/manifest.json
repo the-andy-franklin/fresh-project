@@ -2,7 +2,7 @@
   "$schema": "https://json.schemastore.org/web-manifest",
   "name": "Mezo",
   "short_name": "Mezo",
-  "theme_color": "#10b981",
+  "theme_color": "#1F2937",
   "background_color": "#1F2937",
   "display": "standalone",
   "appType": "pwa",
