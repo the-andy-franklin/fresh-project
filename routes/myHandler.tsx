@@ -9,7 +9,7 @@ export const handler: Handlers<any, { data: string }> = {
 export default function MyHandler({ data }: PageProps) {
   return (
     <div className="w-screen h-screen bg-gray-800 text-gray-50">
-      hello world
+      hello {data}
     </div>
   );
 }

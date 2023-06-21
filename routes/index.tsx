@@ -1,5 +1,4 @@
 import type { JSX } from "preact";
-import InstallPWAButton from "../islands/InstallPWAButton.tsx";
 
 type DivProps = JSX.IntrinsicElements["div"];
 const Div = (props: DivProps) => (
@@ -12,7 +11,7 @@ const Div = (props: DivProps) => (
 type pProps = JSX.IntrinsicElements["p"];
 const P = (props: pProps) => (
   <p
-    className="text-4xl font-bold p-4 text-rainbow"
+    className="text-4xl font-bold p-4  text-center text-rainbow"
     {...props}
   />
 );
@@ -23,7 +22,6 @@ export default function Home() {
       <P>
         Hello World!
       </P>
-      <InstallPWAButton />
     </Div>
   );
 }
