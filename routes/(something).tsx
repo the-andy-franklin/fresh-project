@@ -1,5 +1,3 @@
-import { PageProps } from "$fresh/server.ts";
-
-export default function Something({ url }: PageProps) {
+export default function Something() {
   return <p>this is the something page</p>;
 }
