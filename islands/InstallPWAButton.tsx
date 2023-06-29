@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "preact/hooks";
+import { useSignal } from "@preact/signals";
 
 type BeforeInstallPromptEvent = Event & {
   prompt: () => void;
@@ -6,17 +7,15 @@ type BeforeInstallPromptEvent = Event & {
 };
 
 const InstallPWAButton = () => {
-  const [isPWA, setIsPWA] = useState(true);
+  const isPwa = useSignal(true);
 
   if (typeof window.matchMedia === "function") {
-    const isPWA = window.matchMedia("(display-mode: standalone)").matches ||
+    isPwa.value = window.matchMedia("(display-mode: standalone)").matches ||
       ("standalone" in navigator && navigator.standalone === true) ||
       ("appType" in navigator && navigator.appType === "pwa");
-
-    setIsPWA(isPWA);
   }
 
-  if (isPWA) return null;
+  if (isPwa.value) return null;
 
   const [deferredPrompt, setDeferredPrompt] = useState<
     BeforeInstallPromptEvent | null
@@ -47,7 +46,7 @@ const InstallPWAButton = () => {
     <button
       ref={btnRef}
       onClick={onClick}
-      className="border rounded px-4 py-2 text-rainbow"
+      className="border rounded px-4 py-2"
     >
       Install
     </button>

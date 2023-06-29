@@ -1,6 +1,6 @@
 import Navbar from "../components/Navbar.tsx";
-import { PageProps } from "$fresh/server.ts";
-import { Page } from "$fresh_layout/mod.ts";
+import type { PageProps } from "$fresh/server.ts";
+import type { Page } from "$fresh_layout/mod.ts";
 import type { JSX } from "preact";
 
 type DivProps = JSX.IntrinsicElements["div"];

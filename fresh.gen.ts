@@ -2,7 +2,6 @@
 // This file SHOULD be checked into source version control.
 // This file is automatically updated during development when running `dev.ts`.
 
-import config from "./deno.json" assert { type: "json" };
 import * as $0 from "./routes/(something).tsx";
 import * as $1 from "./routes/[name].tsx";
 import * as $2 from "./routes/_404.tsx";
@@ -14,6 +13,7 @@ import * as $7 from "./routes/api/joke.ts";
 import * as $8 from "./routes/index.tsx";
 import * as $9 from "./routes/myHandler.tsx";
 import * as $$0 from "./islands/InstallPWAButton.tsx";
+import * as $$1 from "./islands/PersistantCounter.tsx";
 
 const manifest = {
   routes: {
@@ -30,9 +30,9 @@ const manifest = {
   },
   islands: {
     "./islands/InstallPWAButton.tsx": $$0,
+    "./islands/PersistantCounter.tsx": $$1,
   },
   baseUrl: import.meta.url,
-  config,
 };
 
 export default manifest;

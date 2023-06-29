@@ -1,10 +1,11 @@
 import { PageProps } from "$fresh/server.ts";
 import type { JSX } from "preact";
+import PersistantCounter from "../islands/PersistantCounter.tsx";
 
 type DivProps = JSX.IntrinsicElements["div"];
 const Div = (props: DivProps) => (
   <div
-    className="w-full flex flex-col flex-grow items-center justify-center bg-gray-800 text-green-300"
+    className="w-full flex flex-col flex-grow items-center justify-center bg-gray-800 text-rainbow"
     {...props}
   />
 );
@@ -12,7 +13,7 @@ const Div = (props: DivProps) => (
 type pProps = JSX.IntrinsicElements["p"];
 const P = (props: pProps) => (
   <p
-    className="text-4xl font-bold p-4 text-rainbow"
+    className="text-4xl font-bold p-4"
     {...props}
   />
 );
@@ -26,6 +27,7 @@ export default function Name(props: PageProps) {
       <P>
         Hello {name}!
       </P>
+      <PersistantCounter pathname={props.url.pathname} />
     </Div>
   );
 }
