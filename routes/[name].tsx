@@ -1,6 +1,6 @@
+import PersistantCounter from "../islands/PersistantCounter.tsx";
 import { PageProps } from "$fresh/server.ts";
 import type { JSX } from "preact";
-import PersistantCounter from "../islands/PersistantCounter.tsx";
 
 type DivProps = JSX.IntrinsicElements["div"];
 const Div = (props: DivProps) => (
