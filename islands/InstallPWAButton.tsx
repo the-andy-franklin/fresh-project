@@ -9,11 +9,13 @@ type BeforeInstallPromptEvent = Event & {
 const InstallPWAButton = () => {
   const isPwa = useSignal(true);
 
-  if (typeof window.matchMedia === "function") {
-    isPwa.value = window.matchMedia("(display-mode: standalone)").matches ||
-      ("standalone" in navigator && navigator.standalone === true) ||
-      ("appType" in navigator && navigator.appType === "pwa");
-  }
+  useEffect(() => {
+    if (typeof window.matchMedia === "function") {
+      isPwa.value = window.matchMedia("(display-mode: standalone)").matches ||
+        ("standalone" in navigator && navigator.standalone === true) ||
+        ("appType" in navigator && navigator.appType === "pwa");
+    }
+  }, []);
 
   if (isPwa.value) return null;
 
