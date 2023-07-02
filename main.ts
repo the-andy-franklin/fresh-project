@@ -13,10 +13,21 @@ import manifest from "./fresh.gen.ts";
 import twindPlugin from "$fresh/plugins/twind.ts";
 import twindConfig from "./twind.config.ts";
 
-import { applyManifestLayouts } from "https://raw.githubusercontent.com/the-andy-franklin/fresh_layout/main/mod.ts";
+import { applyManifestLayouts } from "../fresh_layout/mod.ts";
 
 const newManifest = applyManifestLayouts(manifest);
 
-await start(newManifest, {
-  plugins: [twindPlugin(twindConfig)],
+const wildcards = [];
+for (const key in newManifest.routes) {
+  if (key.endsWith("*.tsx")) {
+    wildcards.push(key);
+  }
+}
+
+wildcards.reverse().forEach((key) => {
+  const temp = newManifest.routes[key];
+  delete newManifest.routes[key];
+  newManifest.routes[key] = temp;
 });
+
+await start(newManifest, { plugins: [twindPlugin(twindConfig)] });
