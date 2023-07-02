@@ -15,6 +15,8 @@ import twindConfig from "./twind.config.ts";
 
 import { applyManifestLayouts } from "https://raw.githubusercontent.com/the-andy-franklin/fresh_layout/main/mod.ts";
 
-await start(applyManifestLayouts(manifest), {
+const newManifest = applyManifestLayouts(manifest);
+
+await start(newManifest, {
   plugins: [twindPlugin(twindConfig)],
 });

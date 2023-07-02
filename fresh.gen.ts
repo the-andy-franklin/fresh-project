@@ -8,10 +8,11 @@ import * as $2 from "./routes/_404.tsx";
 import * as $3 from "./routes/_app.tsx";
 import * as $4 from "./routes/_layout.tsx";
 import * as $5 from "./routes/_middleware.ts";
-import * as $6 from "./routes/api/_middleware.ts";
-import * as $7 from "./routes/api/joke.ts";
-import * as $8 from "./routes/index.tsx";
-import * as $9 from "./routes/myHandler.tsx";
+import * as $6 from "./routes/any*.tsx";
+import * as $7 from "./routes/api/_middleware.ts";
+import * as $8 from "./routes/api/joke.ts";
+import * as $9 from "./routes/index.tsx";
+import * as $10 from "./routes/myHandler.tsx";
 import * as $$0 from "./islands/InstallPWAButton.tsx";
 import * as $$1 from "./islands/PersistantCounter.tsx";
 
@@ -23,10 +24,11 @@ const manifest = {
     "./routes/_app.tsx": $3,
     "./routes/_layout.tsx": $4,
     "./routes/_middleware.ts": $5,
-    "./routes/api/_middleware.ts": $6,
-    "./routes/api/joke.ts": $7,
-    "./routes/index.tsx": $8,
-    "./routes/myHandler.tsx": $9,
+    "./routes/any*.tsx": $6,
+    "./routes/api/_middleware.ts": $7,
+    "./routes/api/joke.ts": $8,
+    "./routes/index.tsx": $9,
+    "./routes/myHandler.tsx": $10,
   },
   islands: {
     "./islands/InstallPWAButton.tsx": $$0,
