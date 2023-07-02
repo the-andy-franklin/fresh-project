@@ -3,34 +3,32 @@
 // This file is automatically updated during development when running `dev.ts`.
 
 import * as $0 from "./routes/(something).tsx";
-import * as $1 from "./routes/*.tsx";
-import * as $2 from "./routes/[name].tsx";
-import * as $3 from "./routes/_404.tsx";
-import * as $4 from "./routes/_app.tsx";
-import * as $5 from "./routes/_layout.tsx";
-import * as $6 from "./routes/_middleware.ts";
-import * as $7 from "./routes/any*.tsx";
-import * as $8 from "./routes/api/_middleware.ts";
-import * as $9 from "./routes/api/joke.ts";
-import * as $10 from "./routes/index.tsx";
-import * as $11 from "./routes/myHandler.tsx";
+import * as $1 from "./routes/[name].tsx";
+import * as $2 from "./routes/_404.tsx";
+import * as $3 from "./routes/_app.tsx";
+import * as $4 from "./routes/_layout.tsx";
+import * as $5 from "./routes/_middleware.ts";
+import * as $6 from "./routes/any*.tsx";
+import * as $7 from "./routes/api/_middleware.ts";
+import * as $8 from "./routes/api/joke.ts";
+import * as $9 from "./routes/index.tsx";
+import * as $10 from "./routes/myHandler.tsx";
 import * as $$0 from "./islands/InstallPWAButton.tsx";
 import * as $$1 from "./islands/PersistantCounter.tsx";
 
 const manifest = {
   routes: {
     "./routes/(something).tsx": $0,
-    "./routes/*.tsx": $1,
-    "./routes/[name].tsx": $2,
-    "./routes/_404.tsx": $3,
-    "./routes/_app.tsx": $4,
-    "./routes/_layout.tsx": $5,
-    "./routes/_middleware.ts": $6,
-    "./routes/any*.tsx": $7,
-    "./routes/api/_middleware.ts": $8,
-    "./routes/api/joke.ts": $9,
-    "./routes/index.tsx": $10,
-    "./routes/myHandler.tsx": $11,
+    "./routes/[name].tsx": $1,
+    "./routes/_404.tsx": $2,
+    "./routes/_app.tsx": $3,
+    "./routes/_layout.tsx": $4,
+    "./routes/_middleware.ts": $5,
+    "./routes/any*.tsx": $6,
+    "./routes/api/_middleware.ts": $7,
+    "./routes/api/joke.ts": $8,
+    "./routes/index.tsx": $9,
+    "./routes/myHandler.tsx": $10,
   },
   islands: {
     "./islands/InstallPWAButton.tsx": $$0,

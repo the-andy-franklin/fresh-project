@@ -5,5 +5,5 @@ export const handler = async (req: Request, ctx: HandlerContext) => {
 };
 
 export default function NotFoundPage({ url }: PageProps) {
-  return <p>No page found for ${url.pathname}</p>;
+  return <p>No page found for {url.pathname}</p>;
 }

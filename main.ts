@@ -24,6 +24,7 @@ for (const key in newManifest.routes) {
   }
 }
 
+// this is done so that wildcard routes yield to specific routes
 wildcards.reverse().forEach((key) => {
   const temp = newManifest.routes[key];
   delete newManifest.routes[key];

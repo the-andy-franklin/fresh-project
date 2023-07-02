@@ -9,16 +9,21 @@ export default function Wildcard(props: PageProps) {
       <div className="flex flex-col flex-grow gap-2 justify-center items-center text-white">
         any
         <Router
-          routeUrl={props.url}
-          fileUrl={import.meta.url}
+          url={props.url}
+          filePath={import.meta.url}
         >
-          <Route path="thing">
+          <Route path="/thing">
             thing
-            <Route path="/pizza">
-              /pizza
-            </Route>
+            <Router url={props.url}>
+              <Route path="/pizza">
+                /pizza
+              </Route>
+              <Route path="/piz">
+                /piz
+              </Route>
+            </Router>
           </Route>
-          <Route path="thing-pizza">
+          <Route path="/thing-pizza">
             <p>thing-pizza</p>
           </Route>
         </Router>
