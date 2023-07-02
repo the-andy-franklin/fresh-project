@@ -13,18 +13,18 @@ export default function Wildcard(props: PageProps) {
           filePath={import.meta.url}
         >
           <Route path="/thing">
-            thing
+            /thing
             <Router url={props.url}>
               <Route path="/pizza">
                 /pizza
               </Route>
-              <Route path="/piz">
-                /piz
-              </Route>
             </Router>
           </Route>
           <Route path="/thing-pizza">
-            <p>thing-pizza</p>
+            /thing-pizza
+          </Route>
+          <Route fallthru>
+            404
           </Route>
         </Router>
       </div>
