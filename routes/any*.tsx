@@ -23,7 +23,7 @@ export default function Wildcard(props: PageProps) {
           <Route path="/thing-pizza">
             /thing-pizza
           </Route>
-          <Route fallthru>
+          <Route path="/">
             404
           </Route>
         </Router>
