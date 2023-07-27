@@ -13,7 +13,7 @@ import manifest from "./fresh.gen.ts";
 import twindPlugin from "$fresh/plugins/twind.ts";
 import twindConfig from "./twind.config.ts";
 
-import { applyManifestLayouts } from "../fresh_layout/mod.ts";
+import { applyManifestLayouts } from "https://raw.githubusercontent.com/the-andy-franklin/fresh_layout/main/mod.ts";
 
 const newManifest = applyManifestLayouts(manifest);
 
@@ -24,7 +24,7 @@ for (const key in newManifest.routes) {
   }
 }
 
-// this is done so that wildcard routes yield to specific routes
+// this is done so that wildcard routes yield to more specific routes
 wildcards.reverse().forEach((key) => {
   const temp = newManifest.routes[key];
   delete newManifest.routes[key];
