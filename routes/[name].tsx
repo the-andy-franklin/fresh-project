@@ -19,8 +19,7 @@ const P = (props: pProps) => (
 );
 
 export default function Name(props: PageProps) {
-  const name = props.params.name.charAt(0).toUpperCase() +
-    props.params.name.slice(1);
+  const name = props.params.name.charAt(0).toUpperCase() + props.params.name.slice(1);
 
   return (
     <Div>

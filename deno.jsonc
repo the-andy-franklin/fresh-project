@@ -15,5 +15,8 @@
         "no-explicit-any"
       ]
     }
+  },
+  "fmt": {
+    "lineWidth": 100
   }
 }
