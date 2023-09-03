@@ -4,7 +4,7 @@ import type { JSX } from "preact";
 type DivProps = JSX.IntrinsicElements["div"];
 const Div = (props: DivProps) => (
   <div
-    className="w-full flex flex-col items-center justify-center bg-gray-800 text-rainbow"
+    className="w-full flex flex-col items-center justify-center bg-gray-800"
     {...props}
   />
 );
@@ -12,7 +12,7 @@ const Div = (props: DivProps) => (
 type h1Props = JSX.IntrinsicElements["h1"];
 const H1 = (props: h1Props) => (
   <h1
-    className="text-4xl font-bold p-4 text-center"
+    className="text-4xl font-bold p-4 text-center text-rainbow"
     {...props}
   />
 );
@@ -20,7 +20,7 @@ const H1 = (props: h1Props) => (
 type buttonProps = JSX.IntrinsicElements["button"];
 const Button = (props: buttonProps) => (
   <button
-    className="border rounded px-4 py-2"
+    className="border rounded px-4 py-2 text-rainbow"
     {...props}
   />
 );
