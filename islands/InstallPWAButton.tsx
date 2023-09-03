@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "preact/hooks";
+import { useEffect, useState } from "preact/hooks";
 import { useSignal } from "@preact/signals";
 
 type BeforeInstallPromptEvent = Event & {
@@ -19,19 +19,18 @@ const InstallPWAButton = () => {
 
   if (isPwa.value) return null;
 
-  const [deferredPrompt, setDeferredPrompt] = useState<
-    BeforeInstallPromptEvent | null
-  >(null);
-  const btnRef = useRef<HTMLButtonElement>(null);
+  const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null);
 
   useEffect(() => {
-    addEventListener("beforeinstallprompt", (e: Event) => {
+    const handleBeforeInstallPrompt = (e: Event) => {
       e.preventDefault();
       setDeferredPrompt(e as BeforeInstallPromptEvent);
-    });
+    };
+
+    addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
 
     return () => {
-      removeEventListener("beforeinstallprompt", (e) => {});
+      removeEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
     };
   }, []);
 
@@ -46,9 +45,8 @@ const InstallPWAButton = () => {
 
   return (
     <button
-      ref={btnRef}
       onClick={onClick}
-      className="border rounded px-4 py-2"
+      className="border rounded px-4 py-2 text-rainbow"
     >
       Install
     </button>

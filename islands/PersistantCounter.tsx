@@ -25,7 +25,11 @@ const Button = (props: buttonProps) => (
   />
 );
 
-const PersistantCounter = ({ pathname = "" }) => {
+type Props = {
+  pathname: string;
+};
+
+const PersistantCounter = ({ pathname }: Props) => {
   const init = parseInt(localStorage.getItem(`counter/${pathname}`) || "0");
   const counter = useSignal(init);
   counter.subscribe((value) => {

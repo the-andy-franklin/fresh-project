@@ -6,7 +6,7 @@
     1px 1px 0 black;
 }
 
-.text-rainbow * {
+.text-rainbow {
   background: linear-gradient(to bottom right, #8b5cf6 25%, #10b981 35%, #3b82f6 45%, #8b5cf6 55%, #10b981 65%, #3b82f6 75%);
   background-size: 275% 100%;
   background-clip: text;
