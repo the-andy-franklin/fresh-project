@@ -9,7 +9,6 @@ export const handler = async (
   ctx: MiddlewareHandlerContext<State>,
 ): Promise<Response> => {
   ctx.state.data2 = "myData2";
-  const resp = await ctx.next();
-  resp.headers.set("server", "fresh server");
-  return resp;
+
+  return ctx.next();;
 };

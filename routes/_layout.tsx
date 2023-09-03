@@ -1,7 +1,6 @@
 import Navbar from "../components/Navbar.tsx";
-import type { PageProps } from "$fresh/server.ts";
-import type { Page } from "$fresh_layout/mod.ts";
 import type { JSX } from "preact";
+import { LayoutProps } from "$fresh/server.ts";
 
 type DivProps = JSX.IntrinsicElements["div"];
 const Div = (props: DivProps) => (
@@ -11,11 +10,13 @@ const Div = (props: DivProps) => (
   />
 );
 
-const Layout = (child: Page, props?: PageProps) => (
-  <Div>
-    <Navbar />
-    {child(props)}
-  </Div>
-);
+const Layout = ({ Component }: LayoutProps) => {
+  return (
+    <Div>
+      <Navbar />
+      <Component />
+    </Div>
+  );
+};
 
 export default Layout;
