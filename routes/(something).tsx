@@ -1,3 +1,3 @@
 export default function Something() {
-  return <p>this is the something page</p>;
+  return <p>this page should be ignored by the router</p>;
 }

@@ -10,13 +10,11 @@ const Div = (props: DivProps) => (
   />
 );
 
-const Layout = ({ Component }: LayoutProps) => {
+export default function Layout({ Component }: LayoutProps) {
   return (
     <Div>
       <Navbar />
       <Component />
     </Div>
   );
-};
-
-export default Layout;
+}
