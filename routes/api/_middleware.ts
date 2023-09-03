@@ -10,5 +10,8 @@ export const handler = async (
 ): Promise<Response> => {
   ctx.state.data2 = "myData2";
 
-  return ctx.next();;
+  const response = await ctx.next();
+  response.headers.set("x-data2", ctx.state.data2);
+
+  return response;
 };
