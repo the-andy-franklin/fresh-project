@@ -5,7 +5,7 @@
   "short_name": "Mezo",
   "lang": "en",
   "dir": "auto",
-  "categories": ["entertainment"],
+  "categories": [],
   "theme_color": "#1F2937",
   "background_color": "#1F2937",
   "display": "standalone",
@@ -29,69 +29,17 @@
       "purpose": "maskable"
     }
   ],
-  "edge_side_panel": {
-    "preferred_width": 400
-  },
-  "handle_links": "not-preferred",
-  "launch_handler": {
-    "client_mode": "navigate-new"
-  },
-  "screenshots": [
+  "shortcuts": [
     {
-      "src": "/pwa_screenshot.png",
-      "sizes": "1280x720",
-      "type": "image/png"
-    }
-  ],
-  "shortcuts": [{
-    "name": "Home",
-    "url": "/"
-  }],
-  "protocol_handlers": [
-    {
-      "protocol": "web+music",
-      "url": "/play?track=%s"
-    }
-  ],
-  "iarc_rating_id": "e58c174a-81d2-5c3c-32cc-34b8de4a52e9",
-  "related_applications": [
-    {
-      "platform": "play",
-      "id": "com.mezo.app"
-    }
-  ],
-  "prefer_related_applications": false,
-  "scope_extensions": [
-    {
-      "type": "web-bundle",
-      "url": "/mezo.webbundle"
-    }
-  ],
-  "share_target": {
-    "action": "/share",
-    "method": "POST",
-    "enctype": "multipart/form-data",
-    "params": {
-      "title": "title",
-      "text": "text",
-      "url": "url",
-      "files": [
+      "name": "Home",
+      "url": "/",
+      "icons": [
         {
-          "name": "file",
-          "accept": ["image/*"]
+          "src": "/pwa_logo.png",
+          "sizes": "512x512",
+          "type": "image/png"
         }
       ]
-    }
-  },
-  "widgets": [
-    {
-      "name": "Mezo",
-      "url": "/widget",
-      "features": {
-        "resizeable": true,
-        "scrolling": true,
-        "frame": "chrome"
-      }
     }
   ]
 }
