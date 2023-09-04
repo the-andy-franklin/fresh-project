@@ -1,20 +1,12 @@
 {
-  "$schema": "https://json.schemastore.org/web-manifest",
   "name": "Mezo",
   "description": "Mezo is a sample PWA",
-  "display_override": [
-    "window-controls-overlay",
-    "standalone",
-    "browser"
-  ],
-  "edge_side_panel": {
-    "preferred_width": 400
-  },
-  "handle_links": "not-preferred",
+  "id": "mezo",
   "short_name": "Mezo",
   "theme_color": "#1F2937",
   "background_color": "#1F2937",
   "display": "standalone",
+  "display_override": ["window-controls-overlay"],
   "appType": "pwa",
   "scope": "/",
   "start_url": "/",
@@ -32,6 +24,30 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
+    }
+  ],
+  "edge_side_panel": {
+    "preferred_width": 400
+  },
+  "handle_links": "not-preferred",
+  "launch_handler": {
+    "client_mode": "navigate-new"
+  },
+  "screenshots": [
+    {
+      "src": "/pwa_screenshot.png",
+      "sizes": "1280x720",
+      "type": "image/png"
+    }
+  ],
+  "shortcuts": [{
+    "name": "Home",
+    "url": "/"
+  }],
+  "protocol_handlers": [
+    {
+      "protocol": "web+music",
+      "url": "/play?track=%s"
     }
   ]
 }
