@@ -5,3 +5,6 @@
 .env.production.local
 .env.local
 .vercel
+
+# Fresh build directory
+_fresh/
